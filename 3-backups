@@ -1,2 +1,36 @@
 /*Microsoft SQL Server allows three basic types of SQL Server backup: Full backup. Differential backup. Transaction log backup.*/
 
+Types of backups
+copy-only backup
+A special-use backup that is independent of the regular sequence of SQL Server backups.
+
+data backup
+A backup of data in a complete database (a database backup), a partial database (a partial backup), 
+or a set of data files or filegroups (a file backup).
+
+database backup
+A backup of a database. Full database backups represent the whole database at the time the backup finished.
+Differential database backups contain only changes made to the database since its most recent full database backup.
+
+differential backup
+A data backup that is based on the latest full backup of a complete or partial database or a set of data 
+files or filegroups (the differential base) and that contains only the data extents that have changed 
+since the differential base.
+
+A differential partial backup records only the data extents that have changed in the filegroups since the
+ previous partial backup, known as the base for the differential.
+
+full backup
+A data backup that contains all the data in a specific database or set of filegroups or files, and also 
+enough log to allow for recovering that data.
+
+log backup
+A backup of transaction logs that includes all log records that were not backed up in a previous log backup. 
+(full recovery model)
+
+file backup
+A backup of one or more database files or filegroups.
+
+partial backup
+Contains data from only some of the filegroups in a database, including the data in the primary filegroup,
+ every read/write filegroup, and any optionally-specified read-only files.
